@@ -11,11 +11,11 @@ let jimmy = new Contact("Jimmy", 28);
 jimmy.addPhone("55551234");
 
 //Here we use the function "call" because of the same reason as with "addPhone" function.
-jimmy.call();
+//jimmy.call();
 // should say "Calling Jimmy at 55551234..."
 
 //Here we use the function "birthday" because of the same reason as with "addPhone" function.
-jimmy.birthday();
+//jimmy.birthday();
 // should say "Wishing Jimmy a happy 29th birthday!"
 
 //Here we take the blueprint(class) of a "person" and make an actual person(object) named Jill.
@@ -23,11 +23,11 @@ jimmy.birthday();
 let jill = new Contact("Jill");
 
 //Here we use the function "call" because of the same reason as with "addPhone" function.
-jill.call();
+//jill.call();
 // should say "Jill has no phone number saved."
 
-console.log(JSON.stringify(jimmy));
-console.log(jimmy instanceof Contact);
+//console.log(JSON.stringify(jimmy));
+//console.log(jimmy instanceof Contact);
 
 let contacts = new ContactList("contacts1.json");
 
@@ -37,7 +37,26 @@ contacts.addContact(new Contact("Jane"));
 
 console.log(contacts);
 
-contacts.save()
-.then(() => { console.log("Contacts written") })
+//contacts.save()
+//.then(() => { console.log("Contacts written") })
+//.catch(console.log);
+
+
+let oldContacts = new ContactList("contacts123.json");
+
+//console.log(oldContacts);
+
+oldContacts.load("contacts1.json")
+.then(
+	//(i) => {
+		console.log("Contacts loaded")
+	//	console.log(i.length);
+	//	console.log(i[1]);
+	//}
+	
+	)
 .catch(console.log);
+
+
+//oldContacts.load("contacts1.json");
 
