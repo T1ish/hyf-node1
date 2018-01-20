@@ -35,7 +35,7 @@ contacts.addContact(jimmy);
 contacts.addContact({name: "Jane"});
 contacts.addContact(new Contact("Jane"));
 
-console.log(contacts);
+//console.log(contacts);
 
 //contacts.save()
 //.then(() => { console.log("Contacts written") })
@@ -47,16 +47,10 @@ let oldContacts = new ContactList("contacts123.json");
 //console.log(oldContacts);
 
 oldContacts.load("contacts1.json")
-.then(
-	//(i) => {
-		console.log("Contacts loaded")
-	//	console.log(i.length);
-	//	console.log(i[1]);
-	//}
-	
-	)
+.then((item) => {console.log("Contacts loaded");
+			console.log(item);
+			})
 .catch(console.log);
 
 
-//oldContacts.load("contacts1.json");
 
